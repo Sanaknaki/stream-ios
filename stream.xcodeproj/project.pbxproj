@@ -25,7 +25,7 @@
 
 /* Begin PBXFileReference section */
 		12B8494296D3975ABED5A673 /* Pods-stream.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stream.release.xcconfig"; path = "Target Support Files/Pods-stream/Pods-stream.release.xcconfig"; sourceTree = "<group>"; };
-		230AE821246C7B2A00B36B96 /* stream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = stream.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		230AE821246C7B2A00B36B96 /* Stream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stream.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		230AE824246C7B2A00B36B96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		230AE826246C7B2A00B36B96 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		230AE828246C7B2A00B36B96 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -71,7 +71,7 @@
 		230AE822246C7B2A00B36B96 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				230AE821246C7B2A00B36B96 /* stream.app */,
+				230AE821246C7B2A00B36B96 /* Stream.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -183,7 +183,7 @@
 			);
 			name = stream;
 			productName = stream;
-			productReference = 230AE821246C7B2A00B36B96 /* stream.app */;
+			productReference = 230AE821246C7B2A00B36B96 /* Stream.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -441,7 +441,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sanaknaki.stream;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Stream;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -460,7 +460,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sanaknaki.stream;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Stream;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
