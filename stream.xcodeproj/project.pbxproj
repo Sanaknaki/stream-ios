@@ -15,6 +15,11 @@
 		230AE831246C7B2F00B36B96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 230AE82F246C7B2F00B36B96 /* LaunchScreen.storyboard */; };
 		230AE839246C8A6C00B36B96 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 230AE838246C8A6C00B36B96 /* GoogleService-Info.plist */; };
 		230AE83C246C970B00B36B96 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230AE83B246C970B00B36B96 /* Extensions.swift */; };
+		230AE83E246C9ED600B36B96 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230AE83D246C9ED600B36B96 /* CustomImageView.swift */; };
+		230AE845246CB1A300B36B96 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230AE844246CB1A300B36B96 /* SignUpViewController.swift */; };
+		230AE847246CB6E900B36B96 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230AE846246CB6E900B36B96 /* TabBarController.swift */; };
+		230AE84B246CB84A00B36B96 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230AE84A246CB84A00B36B96 /* HomeViewController.swift */; };
+		230AE84D246CB85300B36B96 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230AE84C246CB85300B36B96 /* ListViewController.swift */; };
 		9B1619A1DEF19312DC7B4FF9 /* Pods_stream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9678B1752171E36C510DA1DC /* Pods_stream.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +35,13 @@
 		230AE832246C7B2F00B36B96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		230AE838246C8A6C00B36B96 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		230AE83B246C970B00B36B96 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		230AE83D246C9ED600B36B96 /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
+		230AE840246CA40600B36B96 /* AvenirNext-DemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirNext-DemiBold.ttf"; sourceTree = "<group>"; };
+		230AE841246CA40600B36B96 /* AvenirNext-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirNext-Regular.ttf"; sourceTree = "<group>"; };
+		230AE844246CB1A300B36B96 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		230AE846246CB6E900B36B96 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		230AE84A246CB84A00B36B96 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		230AE84C246CB85300B36B96 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		2DE69D7FDF75B29AE710AE3F /* Pods-stream.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stream.debug.xcconfig"; path = "Target Support Files/Pods-stream/Pods-stream.debug.xcconfig"; sourceTree = "<group>"; };
 		9678B1752171E36C510DA1DC /* Pods_stream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_stream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -67,15 +79,20 @@
 		230AE823246C7B2A00B36B96 /* stream */ = {
 			isa = PBXGroup;
 			children = (
+				230AE849246CB83F00B36B96 /* List */,
+				230AE848246CB83B00B36B96 /* Home */,
+				230AE843246CB18F00B36B96 /* SignUp */,
+				230AE842246CB18800B36B96 /* SignIn */,
+				230AE83F246CA3EF00B36B96 /* Fonts */,
 				230AE83A246C96FA00B36B96 /* Utils */,
 				230AE824246C7B2A00B36B96 /* AppDelegate.swift */,
 				230AE826246C7B2A00B36B96 /* SceneDelegate.swift */,
-				230AE828246C7B2A00B36B96 /* SignInViewController.swift */,
 				230AE82A246C7B2A00B36B96 /* Main.storyboard */,
 				230AE82D246C7B2F00B36B96 /* Assets.xcassets */,
 				230AE82F246C7B2F00B36B96 /* LaunchScreen.storyboard */,
 				230AE838246C8A6C00B36B96 /* GoogleService-Info.plist */,
 				230AE832246C7B2F00B36B96 /* Info.plist */,
+				230AE846246CB6E900B36B96 /* TabBarController.swift */,
 			);
 			path = stream;
 			sourceTree = "<group>";
@@ -84,8 +101,50 @@
 			isa = PBXGroup;
 			children = (
 				230AE83B246C970B00B36B96 /* Extensions.swift */,
+				230AE83D246C9ED600B36B96 /* CustomImageView.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		230AE83F246CA3EF00B36B96 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				230AE840246CA40600B36B96 /* AvenirNext-DemiBold.ttf */,
+				230AE841246CA40600B36B96 /* AvenirNext-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		230AE842246CB18800B36B96 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				230AE828246C7B2A00B36B96 /* SignInViewController.swift */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		230AE843246CB18F00B36B96 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				230AE844246CB1A300B36B96 /* SignUpViewController.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		230AE848246CB83B00B36B96 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				230AE84A246CB84A00B36B96 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		230AE849246CB83F00B36B96 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				230AE84C246CB85300B36B96 /* ListViewController.swift */,
+			);
+			path = List;
 			sourceTree = "<group>";
 		};
 		3B7F8B33C014DAD3D00F93CB /* Frameworks */ = {
@@ -221,10 +280,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				230AE845246CB1A300B36B96 /* SignUpViewController.swift in Sources */,
 				230AE829246C7B2A00B36B96 /* SignInViewController.swift in Sources */,
 				230AE825246C7B2A00B36B96 /* AppDelegate.swift in Sources */,
+				230AE84B246CB84A00B36B96 /* HomeViewController.swift in Sources */,
 				230AE827246C7B2A00B36B96 /* SceneDelegate.swift in Sources */,
+				230AE84D246CB85300B36B96 /* ListViewController.swift in Sources */,
+				230AE847246CB6E900B36B96 /* TabBarController.swift in Sources */,
 				230AE83C246C970B00B36B96 /* Extensions.swift in Sources */,
+				230AE83E246C9ED600B36B96 /* CustomImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

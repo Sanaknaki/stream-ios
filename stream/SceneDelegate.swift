@@ -21,7 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window = UIWindow(windowScene: windowScene)
         
-        window?.rootViewController = SignInViewController()
+        window?.rootViewController = TabBarController()
         window?.makeKeyAndVisible()
     }
 
