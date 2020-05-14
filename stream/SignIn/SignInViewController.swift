@@ -136,11 +136,16 @@ class SignInViewController: UIViewController {
         errorMessage.isHidden = true
     }
     
+    @objc func dismissKeyboard() { view.endEditing(true) }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = .darkPurple()
 
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tap)
+        
         view.addSubview(logo)
         view.addSubview(createNewAccountButton)
         view.addSubview(signInButton)
