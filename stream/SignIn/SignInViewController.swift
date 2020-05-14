@@ -148,7 +148,8 @@ class SignInViewController: UIViewController {
         view.addSubview(emailTextField)
         view.addSubview(errorMessage)
         
-        logo.anchor(top: view.topAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 200, paddingLeft: 130, paddingBottom: 0, paddingRight: 130, width: 0, height: 35)
+        logo.anchor(top: view.topAnchor, left: nil, bottom: nil, right: nil, paddingTop: 200, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 140, height: 32)
+        logo.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         
         createNewAccountButton.anchor(top: nil, left: nil, bottom: view.bottomAnchor, right: nil, paddingTop: 0, paddingLeft: 0, paddingBottom: 40, paddingRight: 0, width: 0, height: 0)
         createNewAccountButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
