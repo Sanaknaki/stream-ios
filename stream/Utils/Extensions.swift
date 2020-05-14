@@ -22,6 +22,10 @@ extension UIColor {
     static func lightPurple() -> UIColor {
         return UIColor.rgb(red: 123, green: 102, blue: 194)
     }
+    
+    static func danger() -> UIColor {
+        return UIColor.rgb(red: 255, green: 91, blue: 91)
+    }
 }
 
 extension UIView {

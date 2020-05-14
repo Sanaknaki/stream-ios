@@ -81,10 +81,11 @@
 			children = (
 				230AE849246CB83F00B36B96 /* List */,
 				230AE848246CB83B00B36B96 /* Home */,
-				230AE843246CB18F00B36B96 /* SignUp */,
 				230AE842246CB18800B36B96 /* SignIn */,
+				230AE843246CB18F00B36B96 /* SignUp */,
 				230AE83F246CA3EF00B36B96 /* Fonts */,
 				230AE83A246C96FA00B36B96 /* Utils */,
+				230AE846246CB6E900B36B96 /* TabBarController.swift */,
 				230AE824246C7B2A00B36B96 /* AppDelegate.swift */,
 				230AE826246C7B2A00B36B96 /* SceneDelegate.swift */,
 				230AE82A246C7B2A00B36B96 /* Main.storyboard */,
@@ -92,7 +93,6 @@
 				230AE82F246C7B2F00B36B96 /* LaunchScreen.storyboard */,
 				230AE838246C8A6C00B36B96 /* GoogleService-Info.plist */,
 				230AE832246C7B2F00B36B96 /* Info.plist */,
-				230AE846246CB6E900B36B96 /* TabBarController.swift */,
 			);
 			path = stream;
 			sourceTree = "<group>";
