@@ -20,6 +20,13 @@
 		230AE847246CB6E900B36B96 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230AE846246CB6E900B36B96 /* TabBarController.swift */; };
 		230AE84B246CB84A00B36B96 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230AE84A246CB84A00B36B96 /* HomeViewController.swift */; };
 		230AE84D246CB85300B36B96 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230AE84C246CB85300B36B96 /* ListViewController.swift */; };
+		230AE84F246DC1A900B36B96 /* HomeViewHeaderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230AE84E246DC1A900B36B96 /* HomeViewHeaderController.swift */; };
+		230AE852246DC7EA00B36B96 /* HomeViewCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230AE851246DC7EA00B36B96 /* HomeViewCellController.swift */; };
+		230AE854246F03B500B36B96 /* NewHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230AE853246F03B500B36B96 /* NewHomeViewController.swift */; };
+		230AE857246F417200B36B96 /* CreateStreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230AE856246F417200B36B96 /* CreateStreamViewController.swift */; };
+		230AE859246F48E600B36B96 /* CreateStreamInputTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230AE858246F48E600B36B96 /* CreateStreamInputTextView.swift */; };
+		230AE85B246F4BEC00B36B96 /* ListViewCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230AE85A246F4BEC00B36B96 /* ListViewCellController.swift */; };
+		230AE85D246F589700B36B96 /* ListViewHeaderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230AE85C246F589700B36B96 /* ListViewHeaderController.swift */; };
 		9B1619A1DEF19312DC7B4FF9 /* Pods_stream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9678B1752171E36C510DA1DC /* Pods_stream.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +49,14 @@
 		230AE846246CB6E900B36B96 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		230AE84A246CB84A00B36B96 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		230AE84C246CB85300B36B96 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		230AE84E246DC1A900B36B96 /* HomeViewHeaderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewHeaderController.swift; sourceTree = "<group>"; };
+		230AE850246DC48000B36B96 /* AvenirNext-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirNext-Bold.ttf"; sourceTree = "<group>"; };
+		230AE851246DC7EA00B36B96 /* HomeViewCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewCellController.swift; sourceTree = "<group>"; };
+		230AE853246F03B500B36B96 /* NewHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewHomeViewController.swift; sourceTree = "<group>"; };
+		230AE856246F417200B36B96 /* CreateStreamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateStreamViewController.swift; sourceTree = "<group>"; };
+		230AE858246F48E600B36B96 /* CreateStreamInputTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateStreamInputTextView.swift; sourceTree = "<group>"; };
+		230AE85A246F4BEC00B36B96 /* ListViewCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewCellController.swift; sourceTree = "<group>"; };
+		230AE85C246F589700B36B96 /* ListViewHeaderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewHeaderController.swift; sourceTree = "<group>"; };
 		2DE69D7FDF75B29AE710AE3F /* Pods-stream.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stream.debug.xcconfig"; path = "Target Support Files/Pods-stream/Pods-stream.debug.xcconfig"; sourceTree = "<group>"; };
 		9678B1752171E36C510DA1DC /* Pods_stream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_stream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -79,6 +94,7 @@
 		230AE823246C7B2A00B36B96 /* stream */ = {
 			isa = PBXGroup;
 			children = (
+				230AE855246F415B00B36B96 /* CreateStream */,
 				230AE849246CB83F00B36B96 /* List */,
 				230AE848246CB83B00B36B96 /* Home */,
 				230AE842246CB18800B36B96 /* SignIn */,
@@ -109,6 +125,7 @@
 		230AE83F246CA3EF00B36B96 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				230AE850246DC48000B36B96 /* AvenirNext-Bold.ttf */,
 				230AE840246CA40600B36B96 /* AvenirNext-DemiBold.ttf */,
 				230AE841246CA40600B36B96 /* AvenirNext-Regular.ttf */,
 			);
@@ -135,6 +152,9 @@
 			isa = PBXGroup;
 			children = (
 				230AE84A246CB84A00B36B96 /* HomeViewController.swift */,
+				230AE853246F03B500B36B96 /* NewHomeViewController.swift */,
+				230AE851246DC7EA00B36B96 /* HomeViewCellController.swift */,
+				230AE84E246DC1A900B36B96 /* HomeViewHeaderController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -143,8 +163,19 @@
 			isa = PBXGroup;
 			children = (
 				230AE84C246CB85300B36B96 /* ListViewController.swift */,
+				230AE85A246F4BEC00B36B96 /* ListViewCellController.swift */,
+				230AE85C246F589700B36B96 /* ListViewHeaderController.swift */,
 			);
 			path = List;
+			sourceTree = "<group>";
+		};
+		230AE855246F415B00B36B96 /* CreateStream */ = {
+			isa = PBXGroup;
+			children = (
+				230AE856246F417200B36B96 /* CreateStreamViewController.swift */,
+				230AE858246F48E600B36B96 /* CreateStreamInputTextView.swift */,
+			);
+			path = CreateStream;
 			sourceTree = "<group>";
 		};
 		3B7F8B33C014DAD3D00F93CB /* Frameworks */ = {
@@ -280,13 +311,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				230AE854246F03B500B36B96 /* NewHomeViewController.swift in Sources */,
 				230AE845246CB1A300B36B96 /* SignUpViewController.swift in Sources */,
 				230AE829246C7B2A00B36B96 /* SignInViewController.swift in Sources */,
+				230AE852246DC7EA00B36B96 /* HomeViewCellController.swift in Sources */,
 				230AE825246C7B2A00B36B96 /* AppDelegate.swift in Sources */,
+				230AE85B246F4BEC00B36B96 /* ListViewCellController.swift in Sources */,
+				230AE857246F417200B36B96 /* CreateStreamViewController.swift in Sources */,
+				230AE859246F48E600B36B96 /* CreateStreamInputTextView.swift in Sources */,
 				230AE84B246CB84A00B36B96 /* HomeViewController.swift in Sources */,
 				230AE827246C7B2A00B36B96 /* SceneDelegate.swift in Sources */,
 				230AE84D246CB85300B36B96 /* ListViewController.swift in Sources */,
+				230AE84F246DC1A900B36B96 /* HomeViewHeaderController.swift in Sources */,
 				230AE847246CB6E900B36B96 /* TabBarController.swift in Sources */,
+				230AE85D246F589700B36B96 /* ListViewHeaderController.swift in Sources */,
 				230AE83C246C970B00B36B96 /* Extensions.swift in Sources */,
 				230AE83E246C9ED600B36B96 /* CustomImageView.swift in Sources */,
 			);

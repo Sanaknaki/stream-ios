@@ -13,7 +13,7 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.delegate = self
-        
+                
         // Check if there's a user logged in, show login view
         if(Auth.auth().currentUser == nil) {
             DispatchQueue.main.async {
@@ -34,18 +34,18 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
     func setupViewControllers() {
         
         // Home
-        let homeViewController = templateNavController(unselectedImage: #imageLiteral(resourceName: "home-unclicked").withRenderingMode(.alwaysOriginal), selectedImage: #imageLiteral(resourceName: "home-clicked").withRenderingMode(.alwaysOriginal), rootViewController: HomeViewController(collectionViewLayout: UICollectionViewFlowLayout()))
+        let homeViewController = templateNavController(unselectedImage: #imageLiteral(resourceName: "home-unclicked").withRenderingMode(.alwaysOriginal), selectedImage: #imageLiteral(resourceName: "home-clicked").withRenderingMode(.alwaysOriginal), rootViewController: NewHomeViewController())
         
         // List
         let listViewController = templateNavController(unselectedImage: #imageLiteral(resourceName: "list-unclicked").withRenderingMode(.alwaysOriginal), selectedImage: #imageLiteral(resourceName: "list-clicked").withRenderingMode(.alwaysOriginal), rootViewController: ListViewController(collectionViewLayout: UICollectionViewFlowLayout()))
         
-        tabBar.isTranslucent = false
-        tabBar.backgroundColor = .white
-        tabBar.clipsToBounds = true
-        
         // Takes in an array of Nav Controllers, that show their respective ViewController
         viewControllers = [homeViewController,
                            listViewController]
+        
+        tabBar.isTranslucent = false
+        UITabBar.appearance().barTintColor = .darkPurple()
+        tabBar.clipsToBounds = true
         
         // Modify tab bar insets
         guard let items = tabBar.items else { return }
