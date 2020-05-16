@@ -27,6 +27,7 @@
 		230AE859246F48E600B36B96 /* CreateStreamInputTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230AE858246F48E600B36B96 /* CreateStreamInputTextView.swift */; };
 		230AE85B246F4BEC00B36B96 /* ListViewCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230AE85A246F4BEC00B36B96 /* ListViewCellController.swift */; };
 		230AE85D246F589700B36B96 /* ListViewHeaderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230AE85C246F589700B36B96 /* ListViewHeaderController.swift */; };
+		230AE862246FC30600B36B96 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230AE861246FC30600B36B96 /* Post.swift */; };
 		9B1619A1DEF19312DC7B4FF9 /* Pods_stream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9678B1752171E36C510DA1DC /* Pods_stream.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,7 @@
 		230AE858246F48E600B36B96 /* CreateStreamInputTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateStreamInputTextView.swift; sourceTree = "<group>"; };
 		230AE85A246F4BEC00B36B96 /* ListViewCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewCellController.swift; sourceTree = "<group>"; };
 		230AE85C246F589700B36B96 /* ListViewHeaderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewHeaderController.swift; sourceTree = "<group>"; };
+		230AE861246FC30600B36B96 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		2DE69D7FDF75B29AE710AE3F /* Pods-stream.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stream.debug.xcconfig"; path = "Target Support Files/Pods-stream/Pods-stream.debug.xcconfig"; sourceTree = "<group>"; };
 		9678B1752171E36C510DA1DC /* Pods_stream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_stream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -94,6 +96,7 @@
 		230AE823246C7B2A00B36B96 /* stream */ = {
 			isa = PBXGroup;
 			children = (
+				230AE860246FC2FD00B36B96 /* Model */,
 				230AE855246F415B00B36B96 /* CreateStream */,
 				230AE849246CB83F00B36B96 /* List */,
 				230AE848246CB83B00B36B96 /* Home */,
@@ -176,6 +179,14 @@
 				230AE858246F48E600B36B96 /* CreateStreamInputTextView.swift */,
 			);
 			path = CreateStream;
+			sourceTree = "<group>";
+		};
+		230AE860246FC2FD00B36B96 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				230AE861246FC30600B36B96 /* Post.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		3B7F8B33C014DAD3D00F93CB /* Frameworks */ = {
@@ -312,6 +323,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				230AE854246F03B500B36B96 /* NewHomeViewController.swift in Sources */,
+				230AE862246FC30600B36B96 /* Post.swift in Sources */,
 				230AE845246CB1A300B36B96 /* SignUpViewController.swift in Sources */,
 				230AE829246C7B2A00B36B96 /* SignInViewController.swift in Sources */,
 				230AE852246DC7EA00B36B96 /* HomeViewCellController.swift in Sources */,

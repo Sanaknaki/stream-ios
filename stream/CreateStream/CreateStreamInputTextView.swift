@@ -8,7 +8,13 @@
 
 import UIKit
 
-class CreateStreamInputTextView: UITextView {
+protocol CreateStreamInputTextViewDelegate {
+    func textDidChange()
+}
+
+class CreateStreamInputTextView: UITextView, UITextViewDelegate {
+    
+    var textChangeDelegate: CreateStreamInputTextViewDelegate?
     
     fileprivate let placeholderLabel: UILabel = {
         let label = UILabel()
@@ -20,10 +26,16 @@ class CreateStreamInputTextView: UITextView {
         return label
     }()
     
+    func textViewDidChange(_ textView: UITextView) {
+        textChangeDelegate?.textDidChange()
+    }
+    
     func showPlaceholderLabel() { placeholderLabel.isHidden = false }
     
     override init(frame: CGRect, textContainer: NSTextContainer?) {
         super.init(frame: frame, textContainer: textContainer)
+        
+        self.delegate = self
         
         // This detects when change is made, will be used to hide placeholder label when there's text
         NotificationCenter.default.addObserver(self, selector: #selector(handleTextChange), name: UITextView.textDidChangeNotification, object: nil)

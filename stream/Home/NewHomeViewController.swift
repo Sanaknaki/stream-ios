@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 let samuelQuotes = [
     "Normally, both your asses would be dead as fucking fried chicken, but you happen to pull this shit while I'm in a transitional period so I don't wanna kill you, I wanna help you. But I can't give you this case, it don't belong to me. Besides, I've already been through too much shit this morning over this case to hand it over to your dumb ass.",
@@ -21,7 +22,8 @@ class NewHomeViewController: UIViewController, UICollectionViewDataSource, UICol
 
     private(set) var collectionView: UICollectionView
     
-    var today = ""
+    var today = getCurrentDateFormatted()
+    var posts = [Post]()
     
     // Initializers
     init() {
@@ -37,24 +39,13 @@ class NewHomeViewController: UIViewController, UICollectionViewDataSource, UICol
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle { return .lightContent }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        let date = Date()
-        let formatter = DateFormatter()
-        formatter.dateStyle = .medium
-        formatter.timeStyle = .none
-        formatter.locale = Locale(identifier: "en_US")
-        
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "EEEE"
-        
-        self.today = dateFormatter.string(from: date) + ", "
-        self.today += formatter.string(from: date)
-    }
+    override func viewWillAppear(_ animated: Bool) { today = getCurrentDateFormatted() }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-               
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(handleRefresh), name: CreateStreamViewController.updateFeedNotificationName, object: nil)
+        
         // Header
         collectionView.register(HomeViewHeaderController.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "headerId")
         
@@ -81,7 +72,42 @@ class NewHomeViewController: UIViewController, UICollectionViewDataSource, UICol
         
         setupNavigationBar()
         
+        fetchTodaysPosts()
+        
         collectionView.alwaysBounceVertical = true
+    }
+    
+    @objc func handleRefresh() {
+        print("########")
+        
+        self.posts.removeAll()
+        
+        fetchTodaysPosts()
+    }
+    
+    fileprivate func fetchTodaysPosts() {
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        let ref = Database.database().reference().child("posts").child(uid).child(self.today)
+        
+        ref.observeSingleEvent(of: .value) { (snapshot) in
+            // Stop the refresh
+            self.collectionView.refreshControl?.endRefreshing()
+                        
+            guard let dicts = snapshot.value as? [String: Any] else { return }
+            
+            // Value would be the attributes
+            dicts.forEach({ (key: String, value: Any) in
+                guard let dict = value as? [String: Any] else { return }
+                var post = Post(dictionary: dict)
+                
+                post.id = key
+                
+                self.posts.insert(post, at: 0)
+                
+            })
+            
+            self.collectionView.reloadData()
+        }
     }
     
     // Up/Down spacing
@@ -110,12 +136,13 @@ class NewHomeViewController: UIViewController, UICollectionViewDataSource, UICol
     // MARK: - UICollectionViewDataSource -
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeViewCellController.reuseId, for: indexPath) as! HomeViewCellController
-        cell.stream.text = samuelQuotes[indexPath.row]
+        cell.stream.text = posts[indexPath.item].stream
+        cell.today.text = posts[indexPath.item].time
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return samuelQuotes.count
+        return posts.count
     }
     
     // MARK: - UICollectionViewDelegateFlowLayout -

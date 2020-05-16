@@ -93,12 +93,28 @@ extension Date {
         }
         
         return "\(quotient)\(unit)"
-        
-//        if(userDate) {
-//            return "\(quotient)\(unit)"
-//        } else {
-//            return "\(quotient)\(unit) ago"
-//        }
-        
     }
+}
+
+func getCurrentDateFormatted() -> String {
+    let date = Date()
+    let formatter = DateFormatter()
+    formatter.dateStyle = .medium
+    formatter.timeStyle = .none
+    formatter.locale = Locale(identifier: "en_US")
+    
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "EEEE"
+    
+    return dateFormatter.string(from: date) + ", " + formatter.string(from: date)
+}
+
+func getCurrentTimeFormatted() -> String {
+    let formatter = DateFormatter()
+    formatter.locale = Locale(identifier: "en_US_POSIX")
+    formatter.dateFormat = "h:mma"
+    formatter.amSymbol = "AM"
+    formatter.pmSymbol = "PM"
+
+    return formatter.string(from: Date())
 }
