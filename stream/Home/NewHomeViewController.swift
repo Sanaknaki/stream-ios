@@ -21,6 +21,8 @@ class NewHomeViewController: UIViewController, UICollectionViewDataSource, UICol
 
     private(set) var collectionView: UICollectionView
     
+    var today = ""
+    
     // Initializers
     init() {
         // Create new `UICollectionView` and set `UICollectionViewFlowLayout` as its layout
@@ -35,6 +37,20 @@ class NewHomeViewController: UIViewController, UICollectionViewDataSource, UICol
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle { return .lightContent }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .none
+        formatter.locale = Locale(identifier: "en_US")
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "EEEE"
+        
+        self.today = dateFormatter.string(from: date) + ", "
+        self.today += formatter.string(from: date)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -80,6 +96,8 @@ class NewHomeViewController: UIViewController, UICollectionViewDataSource, UICol
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "headerId", for: indexPath) as! HomeViewHeaderController
 
         header.delegate = self
+        
+        header.today.text = self.today
         
         return header
     }

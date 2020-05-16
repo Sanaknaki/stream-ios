@@ -27,7 +27,6 @@ class CreateStreamViewController: UIViewController {
     let currentTime: UILabel = {
         let label = UILabel()
         
-        label.text = "5:42PM"
         label.textColor = .lightPurple()
         label.font = UIFont(name: "AvenirNext-Bold", size: 18)
         
@@ -63,6 +62,31 @@ class CreateStreamViewController: UIViewController {
         
         return btn
     }()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "en_US_POSIX")
+        formatter.dateFormat = "h:mma"
+        formatter.amSymbol = "AM"
+        formatter.pmSymbol = "PM"
+
+        let dateString = formatter.string(from: Date())
+        
+        currentTime.text = dateString
+        _ = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(getTime), userInfo: nil, repeats: true)
+    }
+    
+    @objc func getTime() {
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "en_US_POSIX")
+        formatter.dateFormat = "h:mma"
+        formatter.amSymbol = "AM"
+        formatter.pmSymbol = "PM"
+
+        let dateString = formatter.string(from: Date())
+        
+        currentTime.text = dateString
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

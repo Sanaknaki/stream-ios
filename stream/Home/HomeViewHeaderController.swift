@@ -19,7 +19,6 @@ class HomeViewHeaderController: UICollectionViewCell {
     let today: UILabel = {
         let label = UILabel()
 
-        label.text = "Wednesday, September 13, 2020"
         label.textColor = .lightPurple()
         label.font = UIFont(name: "AvenirNext-Bold", size: 18)
         
@@ -39,7 +38,7 @@ class HomeViewHeaderController: UICollectionViewCell {
     @objc func clickAddButton() {
         delegate?.didClickCreatePost()
     }
-    
+        
     override init(frame: CGRect) {
         super.init(frame: frame)
         

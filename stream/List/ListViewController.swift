@@ -14,6 +14,8 @@ class ListViewController: UICollectionViewController, UICollectionViewDelegateFl
     var cellId = "cellId"
     var headerId = "headerId"
     
+    override var preferredStatusBarStyle: UIStatusBarStyle { return .lightContent }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

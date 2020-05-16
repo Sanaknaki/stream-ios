@@ -14,9 +14,9 @@ class HomeViewController: UICollectionViewController, UICollectionViewDelegateFl
     let cellId   = "cellId"
 
     var streams = [HomeViewCellController]()
-    
+            
     override var preferredStatusBarStyle: UIStatusBarStyle { return .lightContent }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.backgroundColor = .darkPurple()
